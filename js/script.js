@@ -101,7 +101,7 @@ $(document).ready( function() {
   });//END
 
   //LOGIN DISPLAY BUTTON
-  $("form .inp, form .inpp").on("change", function(){
+  $("form .inp, form .inpp").on("input", function(){
     if ($("form .inp").val().length >= 1 && $("form .inpp").val().length >= 1) {
       var control = loginDisplayError($(this).attr("type"), $(this));
       var confirm = 0;
@@ -109,12 +109,16 @@ $(document).ready( function() {
       if (control != undefined && control != false) {
         confirm++;
         if (confirm == 1){
-          $(".login-btn-active").show();
-          $(".login-btn").hide();
+          $(".login-btn-active").css({opacity:1}).removeAttr("disabled");
+
+          // $(".login-btn").hide();
         }
       }
+    } else {
+      $(".login-btn-active").css({opacity:0.4}).addAttr("disabled");
     }
   });//END
+
 
   // $("tbody").on('click','.view-map', function(e){
   //GOOGLE MAP DISPLAY

@@ -9,6 +9,7 @@
     flex-direction: column;
     background: url(../assets/images/home-hero-mobile.png) no-repeat;
     background-size: cover;
+    margin-top: 3rem;
     width: 100%;
   }
   
@@ -100,6 +101,7 @@
 }
 
 #tour-index {
+  margin-top: -3rem;
   opacity: 0.1;
   padding: 6rem 0 14rem 0;
   background: url('../assets/images/bg-tour.jpg') no-repeat center;

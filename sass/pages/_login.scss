@@ -125,8 +125,9 @@
       & .login-btn-active {
         cursor: pointer;
         background: #000;
-        display: none;
+        // display: none;
         transition: all .3s;
+        opacity: 0.3;
 
         &:hover {
           background: $color-primary;
@@ -143,7 +144,11 @@
         margin: 5rem 0 0 0;
       }
 
-      & li button a:hover {
+      & li button {
+        cursor: pointer;
+      }
+      
+      & li button:hover a {
         color: #fff;
       }
   

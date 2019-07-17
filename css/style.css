@@ -613,13 +613,13 @@ h5 {
     #navMobile nav ul {
       color: #fff;
       padding: 6rem 2rem;
-      background: url(../assets/images/mobile-nav-bg.jpg) no-repeat;
+      background: url(../assets/images/mobile-nav-bg-2.jpg) no-repeat;
       background-size: cover;
-      height: 70vh;
+      height: 80vh;
       display: flex;
       flex-direction: column; }
       #navMobile nav ul li {
-        padding: 1rem; }
+        padding: 1.3rem; }
         @media only screen and (max-width: 62em) {
           #navMobile nav ul li {
             display: inline; } }
@@ -627,8 +627,12 @@ h5 {
       #navMobile nav ul li button {
         color: #fff;
         z-index: 99999999999999999999999999;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-family: "Orbitron", sans-serif; }
+        @media only screen and (max-width: 32em) {
+          #navMobile nav ul li a,
+          #navMobile nav ul li button {
+            font-size: 1.6rem; } }
   #navMobile nav ul a::after {
     content: '';
     display: block;
@@ -1071,6 +1075,7 @@ h5 {
       flex-direction: column;
       background: url(../assets/images/home-hero-mobile.png) no-repeat;
       background-size: cover;
+      margin-top: 3rem;
       width: 100%; } }
   #header ul {
     display: flex;
@@ -1134,6 +1139,7 @@ h5 {
     animation-direction: alternate; }
 
 #tour-index {
+  margin-top: -3rem;
   opacity: 0.1;
   padding: 6rem 0 14rem 0;
   background: url("../assets/images/bg-tour.jpg") no-repeat center;
@@ -1592,8 +1598,8 @@ h5 {
     #signUpForm div #login form .login-btn-active {
       cursor: pointer;
       background: #000;
-      display: none;
-      transition: all .3s; }
+      transition: all .3s;
+      opacity: 0.3; }
       #formSection div #login form .login-btn-active:hover,
       #signUpForm div #login form .login-btn-active:hover {
         background: #f60438; }
@@ -1604,8 +1610,11 @@ h5 {
       #formSection div #signUp,
       #signUpForm div #signUp {
         margin: 5rem 0 0 0; } }
-    #formSection div #signUp li button a:hover,
-    #signUpForm div #signUp li button a:hover {
+    #formSection div #signUp li button,
+    #signUpForm div #signUp li button {
+      cursor: pointer; }
+    #formSection div #signUp li button:hover a,
+    #signUpForm div #signUp li button:hover a {
       color: #fff; }
 
 #formSection {
@@ -1880,6 +1889,8 @@ h5 {
 
 #signUpForm {
   padding: 10rem 0 15rem 0; }
+  #signUpForm div h5 {
+    color: #f60438; }
   #signUpForm div form {
     width: 40%;
     display: flex;
@@ -1893,7 +1904,7 @@ h5 {
         width: 70%; } }
     @media only screen and (max-width: 32em) {
       #signUpForm div form {
-        width: 80%; } }
+        width: 90%; } }
     #signUpForm div form input {
       height: 6rem;
       margin-bottom: 2rem;

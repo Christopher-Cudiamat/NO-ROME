@@ -3,7 +3,6 @@
   padding-top: 10rem;
 
   .container {
-
     @media only screen and (max-width : $bp-phone-largest) {
       width: 100%;
     }
@@ -57,6 +56,10 @@
 
 #signUpForm {
   padding: 10rem 0 15rem 0;
+
+  & div h5 {
+    color: $color-primary;
+  }
   
   & div form {
     width:40%;
@@ -73,7 +76,7 @@
     }
 
     @media only screen and (max-width : $bp-phone-largest) {
-      width:80%;
+      width:90%;
     }
   
     & input {
@@ -91,7 +94,6 @@
       margin-top: 2rem;
       padding: 1rem .5rem;
       width: 80%;
-
 
       @media only screen and (max-width : $bp-tablet-largest) {
         font-size: 1.7rem;

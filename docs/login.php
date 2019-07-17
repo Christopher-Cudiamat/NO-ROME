@@ -75,6 +75,7 @@
             <li><h3>NO-ROME LOGIN</h3></li>
             <li><h4>LOG IN TO YOUR ACCOUNT</h4></li>
             <li> 
+              <p class="errorMsg"><p>
               <form action="includes/login.inc.php" method="POST">
                 <label for="">USER NAME</label>
                 <input type="text" name="uid" placeholder="USERNAME/E-MAIL" class="inp">
@@ -87,8 +88,8 @@
                   <p>Forgotten password</p>
                 </div>
                 <div class="btn-wrapper">
-                  <button class="login-btn">LOGIN</button>
-                  <button type="submit" name="submit" class="login-btn-active">LOGIN</button>
+                  <!-- <button class="login-btn">LOGIN</button> -->
+                  <button type="submit" name="submit" class="login-btn-active" disabled>LOGIN</button>
                 </div>
               </form>
             </li>
