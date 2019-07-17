@@ -1,0 +1,239 @@
+#nav {
+  position: fixed;
+  padding: 1rem 0;
+  width: 100%;
+  z-index: 999;
+  overflow-x: hidden;
+  
+  & a {font-family: $font-tertiary;}
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  & ul:first-child img  {
+    width: 20rem;
+    height: auto;
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      width: 13rem;
+      margin-top: .2rem;
+    }
+  }
+  
+  & .navMenu {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      display: none;
+    }
+
+    & li:nth-child(7) {border-right: 1px solid #000;}
+
+    & li:nth-child(8) {padding-right: 1rem;}
+
+    & li:last-child img {
+      width: 2.3rem;
+      height: 2.3rem;
+      cursor: pointer;
+      transition: transform .5s;
+
+      &:hover {transform: rotate(360deg);}
+    } 
+
+    & li a {
+      position: relative;
+      color:#000;
+      margin-left: 2rem;
+      margin-right: 2rem; 
+      font-size: 1.4rem;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      overflow: hidden;
+  
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $color-primary-light;
+        height: 4px;
+        transition-property: right;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        -webkit-clip-path: polygon(0 0, 84% 0, 100% 100%, 13% 100%);
+        clip-path: polygon(0 0, 84% 0, 100% 100%, 13% 100%);
+      }
+  
+      &.active-menu {
+        color: $color-primary;
+        font-weight: 700;
+      }
+      &:hover{color: $color-primary;}
+      &:hover:before, &:focus:before, &:active:before {right: 0;}
+    }
+  }
+
+  .changeNavToBlack {
+    background: #000;
+    width: 100%;
+    margin-top: -1rem;
+    padding: 1.5rem 3rem 1.5rem 2rem;
+    transition: all .3s;
+  }
+
+  .changeNavToNormal {
+    background: none;
+    width: 90%;
+    margin-top: 0;
+    padding: 0;
+    transition: all .3s;
+  }
+
+}
+
+
+//NAV MOBILE/////////////////////
+#navMobile {
+  display: none;
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    display: block;
+  }
+
+  & input { 
+    display: none;
+  }
+
+  & label {
+    width: 3.5rem;
+    height: 3rem;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 9999999;
+    text-align: center;
+    cursor: pointer;
+
+    & span {
+      position: relative;
+      margin-top: 1.5rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 3px;
+        background:$color-primary-dark;
+        display: inline-block;
+      }
+    
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+      }
+
+      &::before { top: 1rem; }
+
+      &::after { top: -1rem; }
+    }
+
+    &:active span::before {
+      top: 1.2rem;
+    }
+
+    &:active span::after {
+      top: -1.2rem;
+    }
+  }
+
+  //NAVIGATION POP OUT
+  & nav {
+    position: fixed;
+    right: 0%;
+    top: 5.8rem;
+    z-index: 9999999999999999;
+    width: 100%;
+    text-align: right;
+    right: -20rem;
+    opacity: 0;
+    transition: all .5s;
+    font-family: $font-tertiary;
+
+    & ul {
+      color: #fff;
+      padding: 6rem 2rem;
+      background: url(../assets/images/mobile-nav-bg.jpg) no-repeat;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+  
+      & li {
+        padding: 1rem;
+        @media only screen and (max-width : $bp-laptop-largest) {
+          display: inline;
+        }
+      }
+  
+      & li a,
+      & li button {
+        color: #fff;
+        z-index: 99999999999999999999999999;
+        font-size: 1.8rem;
+        font-family: $font-tertiary;
+      }
+    }
+  }
+
+  //FUNCTIONALITY
+  
+  //mobile-menu link active effect
+  & nav ul a::after {
+    content:'';
+    display: block;
+    width: 0;
+    background-image: linear-gradient($color-primary-dark, $color-primary-light);
+    padding-top: .5rem;
+    opacity: 0;
+    transition: all .3s;
+  }
+  
+  //MOBILE NAV DISPLAY
+  & input:checked ~ .nav-background {
+    transform: scale(30);
+  }
+  
+  & input:checked ~ nav{
+    opacity: 1;
+    right: 0;
+  }
+
+  & input:checked + label span {
+    background-color: transparent;
+  }
+
+  & input:checked + label span::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  & input:checked + label span::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  
+}

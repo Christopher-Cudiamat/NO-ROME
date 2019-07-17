@@ -1,0 +1,36 @@
+#slider {
+  overflow: hidden;
+
+  @media only screen and (max-width : $bp-tablet-largest) {
+    height:35vh;
+  }
+
+  @media only screen and (max-width : $bp-phone-largest) {
+    height:20vh;
+  }
+
+  & figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: slider-animation 20s infinite;
+
+    @media only screen and (max-width : $bp-tablet-largest) {
+      width: 500%;
+    }
+
+    & img {
+      width: 10%;
+      float: left;
+      display: block;
+
+      @media only screen and (max-width : $bp-tablet-largest) {
+        width: 20%;
+      }
+    }
+
+  }
+
+}
+

@@ -1,0 +1,8 @@
+#pageTitle {
+  display: block;
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    margin: 0 0 4rem 0;
+    
+  }
+}

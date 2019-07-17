@@ -1,0 +1,120 @@
+#infoSignUp {
+  text-align: center;
+  padding-top: 10rem;
+
+  .container {
+
+    @media only screen and (max-width : $bp-phone-largest) {
+      width: 100%;
+    }
+  
+    div {
+
+      h3 {
+        @media only screen and (max-width : $bp-phone-largest) {
+          font-size: 1.5rem;
+        }
+      }
+
+      & p {
+        font-size: 1.8rem;
+        padding:2rem 0 1rem 0;
+
+        @media only screen and (max-width : $bp-tablet-largest) {
+          font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width : $bp-phone-largest) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    & .horizontalLine{
+      padding: 2.5rem 0;
+      
+      @media only screen and (max-width : $bp-phone-largest) {
+        width: 100%;
+        padding: 2.5rem 0 0 0;
+      }
+    }
+
+    & div:last-child() {
+
+      @media only screen and (max-width : $bp-phone-largest) {
+        background: $color-grey-light-1;
+        padding-top: 2.5rem;
+      }
+    }
+
+    & div:first-child(),
+    & div:last-child() {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+#signUpForm {
+  padding: 10rem 0 15rem 0;
+  
+  & div form {
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      width:60%;
+    }
+
+    @media only screen and (max-width : $bp-tablet-largest) {
+      width:70%;
+    }
+
+    @media only screen and (max-width : $bp-phone-largest) {
+      width:80%;
+    }
+  
+    & input {
+      height: 6rem;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+      background: $color-grey-light-1;
+      border: none;
+    }
+
+    & button {
+      height: 6rem;
+      margin: auto;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      padding: 1rem .5rem;
+      width: 80%;
+
+
+      @media only screen and (max-width : $bp-tablet-largest) {
+        font-size: 1.7rem;
+      }
+
+      @media only screen and (max-width : $bp-phone-largest) {
+        font-size: 1.5rem;
+        width: 100%;
+        
+      }
+
+    }
+  }
+
+  & div form  input[type="text"] {
+    font-size: 1.8rem;
+
+    @media only screen and (max-width : $bp-phone-largest) {
+      font-size: 1.6rem;
+    }
+  }
+
+  & div form  input[type="password"] {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,198 @@
+.border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px solid #ccc;
+  transform: translate(-50%);
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    display: none;
+  }
+}
+
+#formSection,
+#signUpForm {
+  
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    h3,h4 {color: rgb(255, 40, 111);}
+
+    & #signUp,
+    & #login{
+      width: 35%;
+      padding: 4rem 7rem;
+      position: relative;
+
+      @media only screen and (max-width : $bp-laptop-largest) {
+        width: 60%;
+      }
+      @media only screen and (max-width : $bp-tablet-largest) {
+        width: 70%;
+        padding: 4rem 2rem;
+      }
+      @media only screen and (max-width : $bp-tablet-medium) {
+        width: 90%;
+      }
+      @media only screen and (max-width : $bp-phone-largest) {
+        width: 100%;
+        padding: 4rem 4rem;
+      } 
+    }
+  
+    &  h4 {
+      margin-bottom: 3rem;
+    }
+  
+    //LOGIN FORM SECTION
+    & #login {
+      @media only screen and (max-width : $bp-laptop-largest) {
+        text-align: center;
+      }
+    }
+
+    & #login form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      & label {
+        display: none;
+      }
+  
+      & input {
+        padding: 1.5rem 4rem;
+        margin-bottom: 2.5rem;
+        border: none;
+        background: rgb(241, 241, 241);
+
+        @media only screen and (max-width : $bp-tablet-largest) {
+          padding: 1.5rem 1rem;
+        }
+      }
+  
+      & div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        align-items: center;
+       
+  
+        & input {
+          margin: .3rem .5rem 0 0;
+        }
+  
+        & span {
+          font-size: 1.6rem;
+        }
+      }
+
+      & .btn-wrapper {
+        position: relative;
+      }
+  
+      & .login-btn,
+      & .login-btn-active {
+        margin-top: 6rem;
+        padding: 2rem 3rem;
+        color: #fff;
+        border: none;
+        width: 40%;
+        letter-spacing: 3px;
+        position: absolute;
+        outline: none;
+  
+        @media only screen and (max-width : $bp-tablet-largest) {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+        }
+        @media only screen and (max-width : $bp-phone-largest) {
+          width: 80%;
+        }
+      }
+
+      & .login-btn {
+        background: #aaa;
+      }
+
+      & .login-btn-active {
+        cursor: pointer;
+        background: #000;
+        display: none;
+        transition: all .3s;
+
+        &:hover {
+          background: $color-primary;
+        }
+      }
+    }
+  
+  
+    //SIGN UP SECTION
+    & #signUp {
+      text-align: center;
+
+      @media only screen and (max-width : $bp-laptop-largest) {
+        margin: 5rem 0 0 0;
+      }
+
+      & li button a:hover {
+        color: #fff;
+      }
+  
+    }
+  }
+}
+
+#formSection {
+  padding: 30vh 0 40vh 0;
+
+  @media only screen and (min-width : $bp-phone-largest) {
+    padding: 30vh 0 40vh 0;
+  }
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    padding: 10vh 0 20vh 0;
+  }
+}
+
+#formSection {
+  padding: 30vh 0 40vh 0;
+
+  @media only screen and (min-width : $bp-phone-largest) {
+    padding: 30vh 0 40vh 0;
+  }
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    padding: 10vh 0 20vh 0;
+  }
+}
+
+#signUpForm {
+  padding: 5vh 0 5vh 0;
+
+  // @media only screen and (min-width : $bp-phone-largest) {
+  //   padding: 30vh 0 40vh 0;
+  // }
+
+  // @media only screen and (max-width : $bp-laptop-largest) {
+  //   padding: 10vh 0 20vh 0;
+  // }
+}
+
+
+#loggedInWrapper {
+  height: 100vh;
+  display: none;
+
+  & .loggedInMessage {
+    color: $color-primary;
+  }
+}

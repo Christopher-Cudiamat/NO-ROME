@@ -1,0 +1,126 @@
+#about-header {
+  padding-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width : $bp-laptop-largest) {
+    padding-top: 2rem;
+  }
+  
+  & div:first-child,
+  & div:last-child {
+    width: 48vw;
+    padding: 10rem 5rem 10rem 10rem;
+    margin-top:10rem;
+    height: auto;
+
+    // @media only screen and (max-width : $bp-desktop-largest) {
+    //   margin-top:5rem;
+    //   width: 48%;
+    //   padding: 10rem 5rem 10rem 5rem;
+    // }
+
+    @media only screen and (max-width : $bp-desktop-medium) {
+      margin-top:5rem;
+      width: 100%;
+      padding: 10rem 5rem 10rem 5rem;
+    }
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      padding: 3rem 2rem 3rem 2rem;
+      margin-top:0;
+    }
+
+
+    h2 {
+      margin-bottom: 4rem;
+      padding-bottom: 1rem;
+      @media only screen and (max-width : $bp-laptop-largest) {
+        order:2;
+      }
+
+      @media only screen and (max-width : $bp-phone-largest) {
+        color: $color-grey-dark-1;
+      }
+    }
+
+    & p {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ccc;
+      border-left: 2px solid #ccc;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+
+      @media only screen and (max-width : $bp-laptop-largest) {
+        padding: 2rem;
+      }
+
+      @media only screen and (max-width : $bp-tablet-largest) {
+        font-size: 1.8rem;
+        padding: 2rem;
+      }
+
+      @media only screen and (max-width : $bp-tablet-largest) {
+        font-size: 1.4rem;
+        padding: 2rem;
+      }
+    }
+   
+  };
+
+  & img:nth-child(2),
+  & img:nth-child(3) {
+    width: 50vw;
+    height: auto;
+    
+    @media only screen and (max-width : $bp-desktop-medium) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      width: 100%;
+    }
+  }
+
+
+  & img:nth-child(2) {
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 90%);
+    }
+  }
+
+  & img:nth-child(3) {
+    -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 23% 100%);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 23% 100%);
+
+    @media only screen and (max-width : $bp-laptop-largest) {
+      clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 90%);
+    }
+  }
+
+
+  //MOBILE DISPLAY ORDER
+  & div:first-child{
+    @media only screen and (max-width : $bp-desktop-medium) {
+      order:2;
+    }
+  }
+  & div:last-child{
+    @media only screen and (max-width : $bp-desktop-medium) {
+      order:4;
+    }
+  }
+  & img:nth-child(2){
+    @media only screen and (max-width : $bp-desktop-medium) {
+      order:1;
+    }
+  }
+  & img:nth-child(3){
+    @media only screen and (max-width : $bp-desktop-medium) {
+      order:3;
+    }
+  }
+}

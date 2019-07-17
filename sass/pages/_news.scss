@@ -1,0 +1,71 @@
+#about-news {
+  padding:20rem 0 20rem 0;
+  background: url('../assets/images/bg-about-news2.jpg') no-repeat center ;
+  background-size: cover;
+
+  @media only screen and (max-width : $bp-phone-largest) {
+    padding:10rem 0 10rem 0;
+    background: none ;
+  }
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width : $bp-phone-largest) {
+      width: 90%;
+    }
+    
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 28%;
+      padding: 5rem; 
+      background: rgba($color: #000000, $alpha: 0.1);
+      margin:1rem;
+
+      @media only screen and (max-width : $bp-laptop-largest) {
+        width: 47%;
+      }
+
+      @media only screen and (max-width : $bp-phone-largest) {
+        width: 100%;
+        padding: 2rem;
+      }
+    }
+
+    & ul li:first-child img {
+      padding-bottom: .5rem;
+      width: 80%;
+    }
+
+    & ul .captions  {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+    }
+
+    & a {
+      color: black;
+      font-size: 1.6rem;
+      display: flex;
+    }
+
+    & ul .arrow-right {
+      padding-top: 2rem;
+      width: 4rem;
+      height: auto;
+      cursor: pointer;
+    }
+
+    & ul li:last-child {
+
+      &:hover {
+        animation-name: hvr-wobble-horizontal;
+        animation-duration: 2s;
+      }
+    }
+  }
+}

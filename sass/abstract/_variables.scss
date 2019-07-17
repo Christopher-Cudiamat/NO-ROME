@@ -1,0 +1,39 @@
+// COLOR VARIABLES
+$color-primary: hsl(347, 97%, 49%);
+$color-primary-light: hsl(347, 97%, 56%);
+$color-primary-dark: hsl(347, 95%, 40%);
+
+$color-secondary: rgb(49, 49, 49);
+
+$color-grey-light-1: #eeeded;
+$color-grey-light-2: rgb(156, 156, 156);
+
+$color-grey-dark-1: rgb(88, 88, 88);
+$color-grey-dark-2: rgb(112, 112, 112);
+
+
+//FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: verdana , sans-serif;
+$font-header: 'Oswald', sans-serif;
+$font-tertiary: 'Orbitron', sans-serif;
+
+
+//MEDIA QUERY RESPONSIVE
+//calculation is (break)px / 16px
+
+//DESKTOP
+$bp-desktop-largest: 87.5em; // = 1400px
+$bp-desktop-medium: 75em; // = 1200px 
+// $bp-desktop-small: 75em; // = 1200px 
+
+//LAPTOP
+$bp-laptop-largest: 62em; // 992px
+
+//TABLET
+$bp-tablet-largest: 48em; // = 768px 
+$bp-tablet-medium: 40.63em; // = 630 something px 
+
+//PHONE
+$bp-phone-largest: 32em; // = 576px
+// $bp-phone-largest: 32em; // = 576px

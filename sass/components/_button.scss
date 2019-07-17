@@ -1,0 +1,80 @@
+.sign-up-btn {
+ 
+    border: 2px solid #000;
+    width: 50%;
+    background: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    transition: all .5s;
+
+    @media only screen and (max-width : $bp-desktop-medium) {
+      width: 100%;
+    }
+    @media only screen and (max-width : $bp-laptop-largest) {
+      width: 70%;
+    }
+    @media only screen and (max-width : $bp-phone-largest) {
+      width: 80%;
+    }
+
+    &:hover {
+      background: $color-primary;
+      color: #fff;
+      border: none;
+    }
+
+    & .sign-up-button{
+      color: #000;
+
+    }
+
+}
+
+
+.createAccount {
+  border: 2px solid #000;
+  width: 50%;
+  background: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  transition: all .5s;
+
+    @media only screen and (max-width : $bp-desktop-medium) {
+      width: 100%;
+    }
+    @media only screen and (max-width : $bp-laptop-largest) {
+      width: 70%;
+    }
+    @media only screen and (max-width : $bp-phone-largest) {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 1.5rem 3rem;
+    }
+
+    &:hover {
+      background: $color-primary;
+      color: #fff;
+      border: none;
+    }
+}
+
+
+.logout-btn,
+.logout-mobile-btn {
+  background: none;
+  outline: none;
+  border: none;
+  font-family: $font-tertiary;
+  cursor: pointer;
+}
+
+.logout-btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: .4rem;
+}
+
+.logout-mobile-btn {
+  padding: 0;
+  color: #fff;
+}
