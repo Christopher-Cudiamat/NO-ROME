@@ -77,7 +77,7 @@
   <!-- Form Section START  -->  
   <section id="signUpForm">
     <div>
-      <h5>PLEASE FILL UP THE FORM</h5>
+      <h3>PLEASE FILL UP THE FORM</h3>
       <form action="includes/signup.inc.php" method="POST">
   
         <input type="text" name="first" placeholder="First Name">

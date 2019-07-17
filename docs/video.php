@@ -25,9 +25,6 @@
     include_once 'nav.php';
   ?>
 
-  <div>
-    <video src=""></video>
-  </div>
   
   <!-- Video Full Section START    -->
   <section id="gallery-video-full">

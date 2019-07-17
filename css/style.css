@@ -947,9 +947,9 @@ h5 {
     @media only screen and (max-width: 62em) {
       #gallery-video-full .video-player {
         width: 75%; } }
-    @media only screen and (max-width: 62em) {
+    @media only screen and (max-width: 32em) {
       #gallery-video-full .video-player {
-        width: 85%; } }
+        width: 100%; } }
     #gallery-video-full .video-player.show-controls .controls {
       bottom: 0; }
     #gallery-video-full .video-player .video-title {
@@ -975,6 +975,9 @@ h5 {
         #gallery-video-full .video-player .video-title .share:hover {
           color: #f60438;
           cursor: pointer; }
+        @media only screen and (max-width: 32em) {
+          #gallery-video-full .video-player .video-title .share {
+            margin-top: -1.3rem; } }
     #gallery-video-full .video-player video {
       width: 100%;
       display: block; }
@@ -994,6 +997,9 @@ h5 {
         flex-shrink: 1;
         display: inline-flex;
         font-size: 1.4rem; }
+        @media only screen and (max-width: 32em) {
+          #gallery-video-full .video-player .controls .start-time {
+            margin-left: 20px; } }
       #gallery-video-full .video-player .controls .seek-bar-time {
         height: 20px;
         border: 1px solid #fc2251;
@@ -1001,6 +1007,11 @@ h5 {
         display: flex; }
         #gallery-video-full .video-player .controls .seek-bar-time:hover {
           cursor: pointer; }
+        @media only screen and (max-width: 32em) {
+          #gallery-video-full .video-player .controls .seek-bar-time {
+            flex-basis: 50%;
+            height: 10px;
+            margin-left: 3px; } }
         #gallery-video-full .video-player .controls .seek-bar-time .progress-bar-time {
           height: 100%;
           width: 1%;
@@ -1016,6 +1027,10 @@ h5 {
         align-items: center;
         flex-basis: 20%;
         justify-content: space-around; }
+        @media only screen and (max-width: 32em) {
+          #gallery-video-full .video-player .controls .volume-ctrl {
+            flex-basis: 40%;
+            margin-right: 3rem; } }
         #gallery-video-full .video-player .controls .volume-ctrl .icon {
           color: #c7052f;
           font-size: 2rem;
@@ -1888,10 +1903,26 @@ h5 {
     padding-right: 2rem; }
 
 #signUpForm {
-  padding: 10rem 0 15rem 0; }
-  #signUpForm div h5 {
-    color: #f60438; }
+  padding: 10rem 0 15rem 0;
+  text-align: center; }
+  @media only screen and (max-width: 32em) {
+    #signUpForm {
+      padding: 5rem 0 10rem 0; } }
+  #signUpForm div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  #signUpForm div h3 {
+    color: #f60438;
+    padding-bottom: 3rem; }
+    @media only screen and (max-width: 48em) {
+      #signUpForm div h3 {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 48em) {
+      #signUpForm div h3 {
+        font-size: 2rem; } }
   #signUpForm div form {
+    margin: 0 auto;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -1917,7 +1948,8 @@ h5 {
       font-size: 1.8rem;
       margin-top: 2rem;
       padding: 1rem .5rem;
-      width: 80%; }
+      width: 80%;
+      cursor: pointer; }
       @media only screen and (max-width: 48em) {
         #signUpForm div form button {
           font-size: 1.7rem; } }

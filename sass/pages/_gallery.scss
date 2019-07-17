@@ -293,8 +293,8 @@
       width: 75%;
     }
 
-    @media only screen and (max-width : $bp-laptop-largest) {
-      width: 85%;
+    @media only screen and (max-width : $bp-phone-largest) {
+      width: 100%;
     }
 
     &.show-controls {
@@ -329,6 +329,10 @@
           color: $color-primary;
           cursor: pointer;
         }
+
+        @media only screen and (max-width : $bp-phone-largest) {
+          margin-top: -1.3rem;
+        }
       }
     }
 
@@ -354,6 +358,9 @@
         flex-shrink: 1;
         display: inline-flex;
         font-size: 1.4rem;
+        @media only screen and (max-width : $bp-phone-largest) {
+          margin-left: 20px;
+        }
       }
 
       & .seek-bar-time {
@@ -364,6 +371,12 @@
         &:hover {
           cursor: pointer;
         } 
+
+        @media only screen and (max-width : $bp-phone-largest) {
+          flex-basis: 50%;
+          height: 10px;
+          margin-left: 3px;
+        }
         
         & .progress-bar-time {
           height: 100%;
@@ -386,6 +399,12 @@
         align-items: center;
         flex-basis: 20%;
         justify-content: space-around;
+
+        @media only screen and (max-width : $bp-phone-largest) {
+          flex-basis: 40%;
+          margin-right: 3rem;
+        }
+
         & .icon {
           color: $color-primary-dark;
           font-size: 2rem;
