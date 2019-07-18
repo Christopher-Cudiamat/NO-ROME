@@ -2,13 +2,14 @@
 <html>
 <head> 
   <meta name="viewport" content="width=device-width,initial-scale=1">   
-  <title>No-Rome | Home</title>
+  <title>No-Rome | Tour</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/no-rome-favicon.png"/>
   <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../js/tour-ajax.js"></script>
   <script src="../js/script.js"></script>
 </head>
 
@@ -59,7 +60,7 @@
   <!-- Header Section END -->
   
   <!-- Tour Section START -->
-  <section id="tour">
+  <section id="tour-complete">
     <div class="container-m">
 
       <table>

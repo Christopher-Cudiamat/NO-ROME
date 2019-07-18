@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/no-rome-favicon.png"/>
   <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../js/tour-ajax-index.js"></script>
   <script src="../js/script.js"></script>
 </head>
 
@@ -64,10 +65,10 @@
   </section>
   <!-- Header Section END -->
 
-  <!-- Tour Section START -->
-  <section id="tour-index">
+  <!-- Tour Section END -->
+  <section id="tour">
     <div class="container-m">
-      <ul class="tour-header">
+    <ul class="tour-header">
         <li>
           <ul class="container-m section-title">
               <li><h2>2019</h2></li>
@@ -75,9 +76,10 @@
           </ul>
         </li>
         </li>
-          <a href="../docs/tour.html">SEE ALL TOURS</a>
+          <a href="../docs/tour.php">SEE ALL TOURS</a>
         </li>
       </ul>
+
       <table>
         <thead>
           <tr>
@@ -85,80 +87,20 @@
             <th>VENUE</th>
             <th>CITY</th>
             <th>SHARE</th>
-            <th><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></th>
+            <th><a>TICKET</a></th>
           </tr>
         </thead>
         
-        <tbody>
-          <tr>
-            <td>Sun, April 6
-              <span><img src="../assets/icons/icon-share.png" alt="share icon"></span>
-            </td>
-            <td>Madison Square Garden<span>Santa Monica, CA</span></td>
-            <td>Santa Monica, CA</td>
-            <td>
-              <img src="../assets/icons/icon-share.png" alt="share icon">
-            </td>
-            <td><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></td>
-          </tr>
+        <tbody id="tour-data">
+         
+          <!-- AJAX CALL -->
           
-          <tr>
-            <td>Sun, May 13
-              <span><img src="../assets/icons/icon-share.png" alt="share icon"></span>
-            </td>
-            <td>Oracle Arena<span>Santa Monica, CA</span></td>
-            <td>Los Angeles, CA</td>
-            <td>
-              <img src="../assets/icons/icon-share.png" alt="share icon">
-            </td>
-            <td><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></td>
-          </tr>
-
-          <tr>
-            <td>Sun, May 22
-              <span><img src="../assets/icons/icon-share.png" alt="share icon"></span>
-            </td>
-            <td>Cleveland Center<span>Santa Monica, CA</span></td>
-            <td>Ohio, CLE</td>
-            <td>
-              <img src="../assets/icons/icon-share.png" alt="share icon">
-            </td>
-            <td><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></td>
-          </tr>
-
-          <tr>
-            <td>Sun, May 30
-              <span><img src="../assets/icons/icon-share.png" alt="share icon"></span>
-            </td>
-            <td>Manchester Stadium<span>Santa Monica, CA</span></td>
-            <td>Manchester, ENG</td>
-            <td>
-              <img src="../assets/icons/icon-share.png" alt="share icon">
-            </td>
-            <td><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></td>
-          </tr>
-          <tr>
-
-          <tr>
-            <td>Sun, June 2
-              <span><img src="../assets/icons/icon-share.png" alt="share icon"></span>
-            </td>
-            <td>Saint Laurent Hall<span>Santa Monica, CA</span></td>
-            <td>Dublin, IRE</td>
-            <td>
-              <!-- <svg class="share-icon">
-                <use xlink:href="../../image/icons/share-icon.svg#icon-trophy">
-              </svg> -->
-              <img src="../assets/icons/icon-share.png" alt="share icon">
-            </td>
-            <td><a href="https://www.songkick.com/artists/7479349-no-rome" target="_blank">TICKET</a></td>
-          </tr>
-
+           
         </tbody>
+        <!-- Tour schedule END--> 
       </table>
     </div> 
   </section>
-  <!-- Tour Section End -->
 
   <!-- News Section START --> 
   <section id="news" class="sectionFadeIn">
@@ -196,13 +138,13 @@
   <!-- Gallery Section START --> 
   <section id="gallery" class="sectionFadeIn">
     <div>
-      <a  href="../docs/gallery-photos.html">
+      <a  href="../docs/gallery-photos.php">
         <img src="../assets/images/home-gal-section-bw-1.jpg" alt="no-rome-image-pink" class="img-1">
         <h4 class="photos">VIEW PHOTO GALLERY</h4>
       </a>
     </div>
     <div>
-      <a  href="../docs/gallery-videos.html">
+      <a  href="../docs/gallery-videos.php">
         <img src="../assets/images/home-gal-section-bw-2.jpg" alt="no-rome-image-pink" class="img-2">
         <h4 class="watch">WATCH MUSIC VIDEOS</h4>
       </a>

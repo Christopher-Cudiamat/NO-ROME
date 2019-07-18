@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>No-Rome | Registe</title>
+  <title>No-Rome | Login</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
@@ -56,11 +56,11 @@
   </nav>
 
   
-    //<!-- Form Section START  -->  
+    <!-- Form Section START  -->  
   <section id="formSection">
         <div class="border">
 
-          //<!-- SIGN UP START -->
+        <!-- SIGN UP START -->
           <ul id="signUp">
             <li><h3>JOIN THE SQUAD</h3></li>
             <li><h4>SIGN UP NOW FOR MORE UPDATES</h4></li>
@@ -70,7 +70,7 @@
             </li>
           </ul>
 
-          //<!-- LOGIN START -->
+          <!-- LOGIN START -->
           <ul id="login">
             <li><h3>NO-ROME LOGIN</h3></li>
             <li><h4>LOG IN TO YOUR ACCOUNT</h4></li>
@@ -96,7 +96,7 @@
           </ul>
         </div>
       </section>';
-  //<!-- Form Section END  -->
+  <!-- Form Section END  -->
   
   <?php
     include_once 'footer.php';

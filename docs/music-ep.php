@@ -79,7 +79,7 @@
       <ul>
         <li><h5>STREAM ON:</h5></li>
         <li><a href="#"><img src="../assets/icons/music-stream-1.png" alt="music streaming logo"></a></li>
-        <li><a href="#"><img src="../assets/icons/music-stream-2.png" alt="music streaming logo"></a></li>
+        <li><a href="https://www.deezer.com/en/album/71422972" target="_blank"><img src="../assets/icons/music-stream-2.png" alt="music streaming logo"></a></li>
         <li><a href="https://open.spotify.com/artist/6auWB5YAlcKaHyrbTH66nd" target="_blank" ><img src="../assets/icons/music-stream-4.png" tralt="music streaming logo"></a></li>
       </ul>
     </div>

@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>No-Rome | Login</title>
+  <title>No-Rome | Sign-Up</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
@@ -77,7 +77,11 @@
   <!-- Form Section START  -->  
   <section id="signUpForm">
     <div>
-      <h3>PLEASE FILL UP THE FORM</h3>
+        <h3>PLEASE FILL UP THE FORM</h3>
+      
+        
+       
+   
       <form action="includes/signup.inc.php" method="POST">
   
         <input type="text" name="first" placeholder="First Name">

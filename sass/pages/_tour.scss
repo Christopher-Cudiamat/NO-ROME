@@ -21,6 +21,18 @@
 }
 
 #tour {
+  opacity: 0;//this is the tour list in index
+  margin-top: -6rem;
+}
+
+#tour-complete {
+  opacity: 1;//this is the tour list in tour-page
+  margin-top: 0;
+}
+
+#tour,
+#tour-complete {
+  transition: all 1s;
   padding: 10rem 0;
   background: url('../assets/images/bg-tour.jpg') no-repeat center;
   background-size: cover;

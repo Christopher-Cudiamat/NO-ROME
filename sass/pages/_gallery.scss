@@ -271,210 +271,210 @@
   }
 }
 
-
-
 //GALLERY VIDEO SECTION
 
 #gallery-video-full {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // padding: 0 0 10rem 0
 
-  & .video-player {
-    position: relative;
-    outline: none;
-    width: 50%;
+  & .video-container {
+    @include flex-column;
+    align-items: center;
     margin: 0rem 0 10rem 0;
-    overflow: hidden;
-    transition: all 1s;
+    position: relative;
 
-    @media only screen and (max-width : $bp-laptop-largest) {
-      width: 75%;
-    }
-
-    @media only screen and (max-width : $bp-phone-largest) {
-      width: 100%;
-    }
-
-    &.show-controls {
-      & .controls {
-        bottom: 0;
-      }
-    }
-
-    & .video-title {
-      border-left: 1px solid #000;
-      border-bottom: 1px solid #000; 
-      margin-bottom: 2rem;
-      padding-left: 1rem;
-      width: 100%;
-      transition: height 1s;
-      display: flex;
-      justify-content: space-between;
-
+    & .video-player {
+      position: relative;
+      outline: none;
+      width: 50%;
+      overflow: hidden;
+      transition: all 1s;
+  
       @media only screen and (max-width : $bp-laptop-largest) {
-        font-size: 2rem;
+        width: 75%;
       }
-
-      & .share {
-        font-size: 2rem;
-        height: 0;
+  
+      @media only screen and (max-width : $bp-phone-largest) {
+        width: 100%;
+      }
+  
+      &.show-controls {
+        & .controls {
+          bottom: 0;
+        }
+      }
+  
+      & .video-title {
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000; 
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        width: 100%;
         transition: height 1s;
-        align-self: center; 
-        display: none;
-        padding-right: 1rem;
-        transition: all .5s;
-        &:hover {
-          color: $color-primary;
-          cursor: pointer;
-        }
-
-        @media only screen and (max-width : $bp-phone-largest) {
-          margin-top: -1.3rem;
-        }
-      }
-    }
-
-    & video {
-      width: 100%;
-      display: block;
-    }
-
-    & .controls {
-      width: 100%;
-      position: absolute;
-      bottom: -50%;
-      padding: 2rem 1rem;
-      color: white;
-      background: rgba(0, 0, 0, 0.384);
-      z-index: 1;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-
-      & .start-time {
-        flex-basis: 5%;
-        flex-shrink: 1;
-        display: inline-flex;
-        font-size: 1.4rem;
-        @media only screen and (max-width : $bp-phone-largest) {
-          margin-left: 20px;
-        }
-      }
-
-      & .seek-bar-time {
-        height: 20px;
-        border: 1px solid $color-primary-light;
-        flex-basis: 60%;
         display: flex;
-        &:hover {
-          cursor: pointer;
-        } 
-
-        @media only screen and (max-width : $bp-phone-largest) {
-          flex-basis: 50%;
-          height: 10px;
-          margin-left: 3px;
-        }
-        
-        & .progress-bar-time {
-          height: 100%;
-          width: 1%;
-          left: 0;
-          background-color: $color-primary-dark;
-          position: relative;
-          display: inline-flex;
-
-          // circle will show when hover
-          &:hover {
-            cursor: pointer;
-            color: #fff;
-          } 
-        }   
-      }
-
-      & .volume-ctrl {
-        display: inline-flex;
-        align-items: center;
-        flex-basis: 20%;
-        justify-content: space-around;
-
-        @media only screen and (max-width : $bp-phone-largest) {
-          flex-basis: 40%;
-          margin-right: 3rem;
-        }
-
-        & .icon {
-          color: $color-primary-dark;
+        justify-content: space-between;
+  
+        @media only screen and (max-width : $bp-laptop-largest) {
           font-size: 2rem;
-          margin: 0 1rem 0 3rem;
         }
-
-        & .seek-bar {
+  
+        & .share {
+          font-size: 2rem;
+          height: 0;
+          transition: height 1s;
+          align-self: center; 
+          display: none;
+          padding-right: 1rem;
+          transition: all .5s;
+          &:hover {
+            color: $color-primary;
+            cursor: pointer;
+          }
+  
+          @media only screen and (max-width : $bp-phone-largest) {
+            margin-top: -1.3rem;
+          }
+        }
+      }
+  
+      & video {
+        width: 100%;
+        display: block;
+      }
+  
+      & .controls {
+        width: 100%;
+        position: absolute;
+        bottom: -50%;
+        padding: 2rem 1rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.384);
+        z-index: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+  
+        & .start-time {
+          flex-basis: 5%;
+          flex-shrink: 1;
           display: inline-flex;
-          flex-basis: 65%;
-          height: 7px;
+          font-size: 1.4rem;
+          @media only screen and (max-width : $bp-phone-largest) {
+            margin-left: 20px;
+          }
+        }
+  
+        & .seek-bar-time {
+          height: 20px;
           border: 1px solid $color-primary-light;
+          flex-basis: 60%;
+          display: flex;
           &:hover {
             cursor: pointer;
           } 
-
-          & .progress-bar {
-            display: inline-flex;
-            height: 5px;
-            width: 100%;
+  
+          @media only screen and (max-width : $bp-phone-largest) {
+            flex-basis: 50%;
+            height: 10px;
+            margin-left: 3px;
+          }
+          
+          & .progress-bar-time {
+            height: 100%;
+            width: 1%;
             left: 0;
-            background: $color-primary-dark;
+            background-color: $color-primary-dark;
+            position: relative;
+            display: inline-flex;
+  
+            // circle will show when hover
+            &:hover {
+              cursor: pointer;
+              color: #fff;
+            } 
+          }   
+        }
+  
+        & .volume-ctrl {
+          display: inline-flex;
+          align-items: center;
+          flex-basis: 20%;
+          justify-content: space-around;
+  
+          @media only screen and (max-width : $bp-phone-largest) {
+            flex-basis: 40%;
+            margin-right: 3rem;
+          }
+  
+          & .icon {
+            color: $color-primary-dark;
+            font-size: 2rem;
+            margin: 0 1rem 0 3rem;
+          }
+  
+          & .seek-bar {
+            display: inline-flex;
+            flex-basis: 65%;
+            height: 7px;
+            border: 1px solid $color-primary-light;
             &:hover {
               cursor: pointer;
             } 
-          }
-        }
-      }
-      
-
-      & .playback-ctrl {
-        flex-basis: 10%;
-        display: inline-flex;
-        justify-content: center;
-        & .btn {
-          font-size: 4rem;
-          background: transparent;
-          outline: 0;
-          border: none;
-          color: $color-primary-dark;
-          &:hover {
-            color: lighten( $color-primary-dark, 20%);
-            cursor: pointer;
-          }
-
-          &.play { //se ce play class pause will be hidden
-            .fa-pause {
-              display: none;
-            }
-          }
-
-          &.pause { //se ce play class pause will be hidden
-            transform: rotate(180deg);
-            .fa-play {
-              display: none;
+  
+            & .progress-bar {
+              display: inline-flex;
+              height: 5px;
+              width: 100%;
+              left: 0;
+              background: $color-primary-dark;
+              &:hover {
+                cursor: pointer;
+              } 
             }
           }
         }
-      }
-      
-
-      & .full-screen-ctrl {
-        flex-basis: 5%;
-        display: inline-flex;
-        justify-content: center;
-        & .full-screen {
-          font-size: 2rem;
-          border: none;
-          outline: 0;
-          background: transparent;
-          color: $color-primary-dark;
+        
+  
+        & .playback-ctrl {
+          flex-basis: 10%;
+          display: inline-flex;
+          justify-content: center;
+          & .btn {
+            font-size: 4rem;
+            background: transparent;
+            outline: 0;
+            border: none;
+            color: $color-primary-dark;
+            &:hover {
+              color: lighten( $color-primary-dark, 20%);
+              cursor: pointer;
+            }
+  
+            &.play { //se ce play class pause will be hidden
+              .fa-pause {
+                display: none;
+              }
+            }
+  
+            &.pause { //se ce play class pause will be hidden
+              transform: rotate(180deg);
+              .fa-play {
+                display: none;
+              }
+            }
+          }
+        }
+        
+  
+        & .full-screen-ctrl {
+          flex-basis: 5%;
+          display: inline-flex;
+          justify-content: center;
+          & .full-screen {
+            font-size: 2rem;
+            border: none;
+            outline: 0;
+            background: transparent;
+            color: $color-primary-dark;
+          }
         }
       }
     }

@@ -35,14 +35,14 @@ $(document).ready( function() {
   });//END
 
   $(window).on("scroll", function() {
-    var distanceHtml = $("html").scrollTop() + 600;
-    var distanceTour = $("#tour-index").offset().top;
+    var distanceHtml = $("html").scrollTop() + 1000;
+    var distanceTour = $("#tour").offset().top;
     var distanceNews = $("#news").offset().top;
     var distanceGallery = $("#gallery").offset().top;
     
 
     if (distanceHtml >= distanceTour) {
-      $("#tour-index").css({opacity: "1"});
+      $("#tour").css({opacity: "1"});
     }
     if (distanceHtml >= distanceNews) {
       $("#news div ul").animate({marginRight: "0"}, 800);
@@ -120,7 +120,6 @@ $(document).ready( function() {
   });//END
 
 
-  // $("tbody").on('click','.view-map', function(e){
   //GOOGLE MAP DISPLAY
   $("tbody").on('click','.view-map', function(e){
     e.preventDefault();
@@ -145,54 +144,54 @@ $(document).ready( function() {
   });//END
   //GOOGLE MAP DISPLAY END
 
-  //AJAX
-  var $display = $('#tour-data');
+  // //AJAX
+  // var $display = $('#tour-data');
 
-    $.ajax({
-      type:"GET",
-      dataType: "json",
-      url:"http://localhost/NO-ROME/docs/includes/tour-data.inc.php",
-      success:function(data) {
-        console.log(data);
+  //   $.ajax({
+  //     type:"GET",
+  //     dataType: "json",
+  //     url:"http://localhost/NO-ROME/docs/includes/tour-data.inc.php",
+  //     success:function(data) {
+  //       console.log(data);
 
-        var str = '';
+  //       var str = '';
 
-        $.each(data, function(i, data){
-          console.log(i);
-          // $display.append('<h1>' + data.city + '</h1>');
+  //       $.each(data, function(i, data){
+  //         console.log(i);
+  //         // $display.append('<h1>' + data.city + '</h1>');
 
         
-          str +='<tr>';
-          str +='<td>'+ data.date +'</td>';
-          str +='<td>'+ data.venue + '<br>';
-          str +=  '<div>';
-          str +=    '<div class="view-map">';
-          str +=      '<a href="#">View Map</a><span><img src="../assets/icons/map-placeholder.png"';
-          str +=        'class="icon-map" alt="map-placeholder"></span>';
-          str +=    '</div>';
-          str +=    '<div  class="close-map">';
-          str +=      '<a href="#">Close Map</a><span><img src="../assets/icons/icon-lcose.png"';
-          str +=        'class="icon-map" alt="map-placeholder"></span>';
-          str +=   '</div>';
-          str +=  '</div> '; 
-          str +=  '</td>';
-          str +=  '<td>'+ data.city +'</td>';
-          str +=  '<td>';
-          str +=    '<img src="../assets/icons/icon-share.png" alt="share icon">';
-          str +=  '</td>';
-          str +=  '<td><a href="https://www.ticketmaster.com/no-rome-tickets/artist/2560724"                  target="_blank">TICKET</a></td>';
-          str +='</tr>';
-          str +='<tr class="map-container">';
-          str +=  '<td colspan="5" class="map-wrapper">';
-          str +=    '<iframe src="https://www.google.com/maps/d/embed?mid=11jJN5DyY1DWb64pDKRMd1Qgx66O4UsKr" class="gmap"></iframe>';
-          str +=  '</td>';
-          str +='</tr>';
-        })
+  //         str +='<tr>';
+  //         str +='<td>'+ data.date +'</td>';
+  //         str +='<td>'+ data.venue + '<br>';
+  //         str +=  '<div>';
+  //         str +=    '<div class="view-map">';
+  //         str +=      '<a href="#">View Map</a><span><img src="../assets/icons/map-placeholder.png"';
+  //         str +=        'class="icon-map" alt="map-placeholder"></span>';
+  //         str +=    '</div>';
+  //         str +=    '<div  class="close-map">';
+  //         str +=      '<a href="#">Close Map</a><span><img src="../assets/icons/icon-lcose.png"';
+  //         str +=        'class="icon-map" alt="map-placeholder"></span>';
+  //         str +=   '</div>';
+  //         str +=  '</div> '; 
+  //         str +=  '</td>';
+  //         str +=  '<td>'+ data.city +'</td>';
+  //         str +=  '<td>';
+  //         str +=    '<img src="../assets/icons/icon-share.png" alt="share icon">';
+  //         str +=  '</td>';
+  //         str +=  '<td><a href="https://www.ticketmaster.com/no-rome-tickets/artist/2560724"                  target="_blank">TICKET</a></td>';
+  //         str +='</tr>';
+  //         str +='<tr class="map-container">';
+  //         str +=  '<td colspan="5" class="map-wrapper">';
+  //         str +=    '<iframe src="https://www.google.com/maps/d/embed?mid=11jJN5DyY1DWb64pDKRMd1Qgx66O4UsKr" class="gmap"></iframe>';
+  //         str +=  '</td>';
+  //         str +='</tr>';
+  //       })
 
-        $display.append(str);
+  //       $display.append(str);
 
-      }
-    })
+  //     }
+  //   })
 
 });//document.ready END
 

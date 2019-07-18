@@ -10,9 +10,6 @@ if (isset($_POST['submit'])) {
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $uid = mysqli_real_escape_string($conn, $_POST['uid']);
   $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-
-
-  
   // ERROR handlers
   //checking empy fields
   //NOTE:GOOD PRACTICE CHECK ERROR FIRST

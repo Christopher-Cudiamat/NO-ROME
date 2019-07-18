@@ -259,6 +259,31 @@ h5 {
   padding: 0;
   color: #fff; }
 
+#comment-section,
+#comment-section-disable {
+  display: block;
+  margin-top: 2rem;
+  left: 0;
+  display: flex;
+  justify-content: space-between; }
+  #comment-section form,
+  #comment-section-disable form {
+    margin-right: 2rem; }
+    #comment-section form div textarea,
+    #comment-section-disable form div textarea {
+      height: 6rem;
+      width: 40rem;
+      resize: none;
+      border-radius: 5px; }
+  #comment-section button,
+  #comment-section-disable button {
+    padding: .5rem;
+    font-size: 1.7rem;
+    height: 3.5rem; }
+
+#comment-section-disable {
+  opacity: 0.5; }
+
 #social {
   display: none;
   background: rgba(0, 0, 0, 0.9);
@@ -933,26 +958,27 @@ h5 {
           grid-row: 5/7;
           background: #000; } }
 
-#gallery-video-full {
+#gallery-video-full .video-container {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  #gallery-video-full .video-player {
+  align-items: center;
+  margin: 0rem 0 10rem 0;
+  position: relative; }
+  #gallery-video-full .video-container .video-player {
     position: relative;
     outline: none;
     width: 50%;
-    margin: 0rem 0 10rem 0;
     overflow: hidden;
     transition: all 1s; }
     @media only screen and (max-width: 62em) {
-      #gallery-video-full .video-player {
+      #gallery-video-full .video-container .video-player {
         width: 75%; } }
     @media only screen and (max-width: 32em) {
-      #gallery-video-full .video-player {
+      #gallery-video-full .video-container .video-player {
         width: 100%; } }
-    #gallery-video-full .video-player.show-controls .controls {
+    #gallery-video-full .video-container .video-player.show-controls .controls {
       bottom: 0; }
-    #gallery-video-full .video-player .video-title {
+    #gallery-video-full .video-container .video-player .video-title {
       border-left: 1px solid #000;
       border-bottom: 1px solid #000;
       margin-bottom: 2rem;
@@ -962,9 +988,9 @@ h5 {
       display: flex;
       justify-content: space-between; }
       @media only screen and (max-width: 62em) {
-        #gallery-video-full .video-player .video-title {
+        #gallery-video-full .video-container .video-player .video-title {
           font-size: 2rem; } }
-      #gallery-video-full .video-player .video-title .share {
+      #gallery-video-full .video-container .video-player .video-title .share {
         font-size: 2rem;
         height: 0;
         transition: height 1s;
@@ -972,16 +998,16 @@ h5 {
         display: none;
         padding-right: 1rem;
         transition: all .5s; }
-        #gallery-video-full .video-player .video-title .share:hover {
+        #gallery-video-full .video-container .video-player .video-title .share:hover {
           color: #f60438;
           cursor: pointer; }
         @media only screen and (max-width: 32em) {
-          #gallery-video-full .video-player .video-title .share {
+          #gallery-video-full .video-container .video-player .video-title .share {
             margin-top: -1.3rem; } }
-    #gallery-video-full .video-player video {
+    #gallery-video-full .video-container .video-player video {
       width: 100%;
       display: block; }
-    #gallery-video-full .video-player .controls {
+    #gallery-video-full .video-container .video-player .controls {
       width: 100%;
       position: absolute;
       bottom: -50%;
@@ -992,88 +1018,88 @@ h5 {
       display: flex;
       justify-content: space-evenly;
       align-items: center; }
-      #gallery-video-full .video-player .controls .start-time {
+      #gallery-video-full .video-container .video-player .controls .start-time {
         flex-basis: 5%;
         flex-shrink: 1;
         display: inline-flex;
         font-size: 1.4rem; }
         @media only screen and (max-width: 32em) {
-          #gallery-video-full .video-player .controls .start-time {
+          #gallery-video-full .video-container .video-player .controls .start-time {
             margin-left: 20px; } }
-      #gallery-video-full .video-player .controls .seek-bar-time {
+      #gallery-video-full .video-container .video-player .controls .seek-bar-time {
         height: 20px;
         border: 1px solid #fc2251;
         flex-basis: 60%;
         display: flex; }
-        #gallery-video-full .video-player .controls .seek-bar-time:hover {
+        #gallery-video-full .video-container .video-player .controls .seek-bar-time:hover {
           cursor: pointer; }
         @media only screen and (max-width: 32em) {
-          #gallery-video-full .video-player .controls .seek-bar-time {
+          #gallery-video-full .video-container .video-player .controls .seek-bar-time {
             flex-basis: 50%;
             height: 10px;
             margin-left: 3px; } }
-        #gallery-video-full .video-player .controls .seek-bar-time .progress-bar-time {
+        #gallery-video-full .video-container .video-player .controls .seek-bar-time .progress-bar-time {
           height: 100%;
           width: 1%;
           left: 0;
           background-color: #c7052f;
           position: relative;
           display: inline-flex; }
-          #gallery-video-full .video-player .controls .seek-bar-time .progress-bar-time:hover {
+          #gallery-video-full .video-container .video-player .controls .seek-bar-time .progress-bar-time:hover {
             cursor: pointer;
             color: #fff; }
-      #gallery-video-full .video-player .controls .volume-ctrl {
+      #gallery-video-full .video-container .video-player .controls .volume-ctrl {
         display: inline-flex;
         align-items: center;
         flex-basis: 20%;
         justify-content: space-around; }
         @media only screen and (max-width: 32em) {
-          #gallery-video-full .video-player .controls .volume-ctrl {
+          #gallery-video-full .video-container .video-player .controls .volume-ctrl {
             flex-basis: 40%;
             margin-right: 3rem; } }
-        #gallery-video-full .video-player .controls .volume-ctrl .icon {
+        #gallery-video-full .video-container .video-player .controls .volume-ctrl .icon {
           color: #c7052f;
           font-size: 2rem;
           margin: 0 1rem 0 3rem; }
-        #gallery-video-full .video-player .controls .volume-ctrl .seek-bar {
+        #gallery-video-full .video-container .video-player .controls .volume-ctrl .seek-bar {
           display: inline-flex;
           flex-basis: 65%;
           height: 7px;
           border: 1px solid #fc2251; }
-          #gallery-video-full .video-player .controls .volume-ctrl .seek-bar:hover {
+          #gallery-video-full .video-container .video-player .controls .volume-ctrl .seek-bar:hover {
             cursor: pointer; }
-          #gallery-video-full .video-player .controls .volume-ctrl .seek-bar .progress-bar {
+          #gallery-video-full .video-container .video-player .controls .volume-ctrl .seek-bar .progress-bar {
             display: inline-flex;
             height: 5px;
             width: 100%;
             left: 0;
             background: #c7052f; }
-            #gallery-video-full .video-player .controls .volume-ctrl .seek-bar .progress-bar:hover {
+            #gallery-video-full .video-container .video-player .controls .volume-ctrl .seek-bar .progress-bar:hover {
               cursor: pointer; }
-      #gallery-video-full .video-player .controls .playback-ctrl {
+      #gallery-video-full .video-container .video-player .controls .playback-ctrl {
         flex-basis: 10%;
         display: inline-flex;
         justify-content: center; }
-        #gallery-video-full .video-player .controls .playback-ctrl .btn {
+        #gallery-video-full .video-container .video-player .controls .playback-ctrl .btn {
           font-size: 4rem;
           background: transparent;
           outline: 0;
           border: none;
           color: #c7052f; }
-          #gallery-video-full .video-player .controls .playback-ctrl .btn:hover {
+          #gallery-video-full .video-container .video-player .controls .playback-ctrl .btn:hover {
             color: #fa3862;
             cursor: pointer; }
-          #gallery-video-full .video-player .controls .playback-ctrl .btn.play .fa-pause {
+          #gallery-video-full .video-container .video-player .controls .playback-ctrl .btn.play .fa-pause {
             display: none; }
-          #gallery-video-full .video-player .controls .playback-ctrl .btn.pause {
+          #gallery-video-full .video-container .video-player .controls .playback-ctrl .btn.pause {
             transform: rotate(180deg); }
-            #gallery-video-full .video-player .controls .playback-ctrl .btn.pause .fa-play {
+            #gallery-video-full .video-container .video-player .controls .playback-ctrl .btn.pause .fa-play {
               display: none; }
-      #gallery-video-full .video-player .controls .full-screen-ctrl {
+      #gallery-video-full .video-container .video-player .controls .full-screen-ctrl {
         flex-basis: 5%;
         display: inline-flex;
         justify-content: center; }
-        #gallery-video-full .video-player .controls .full-screen-ctrl .full-screen {
+        #gallery-video-full .video-container .video-player .controls .full-screen-ctrl .full-screen {
           font-size: 2rem;
           border: none;
           outline: 0;
@@ -1152,124 +1178,6 @@ h5 {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate; }
-
-#tour-index {
-  margin-top: -3rem;
-  opacity: 0.1;
-  padding: 6rem 0 14rem 0;
-  background: url("../assets/images/bg-tour.jpg") no-repeat center;
-  background-size: cover;
-  color: #fff;
-  transition: all 1s;
-  width: 100%; }
-  #tour-index .tour-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 10rem; }
-    #tour-index .tour-header a, #tour-index .tour-header h2, #tour-index .tour-header h3 {
-      color: #fff; }
-    #tour-index .tour-header h2 {
-      font-size: 8rem; }
-    #tour-index .tour-header h3 {
-      margin-top: -2.8rem;
-      font-size: 6rem; }
-    #tour-index .tour-header a {
-      font-size: 1.8rem; }
-  #tour-index table {
-    width: 100%;
-    text-align: left;
-    padding: 0 2rem; }
-    #tour-index table thead {
-      font-size: 2.5rem; }
-      #tour-index table thead tr {
-        border-bottom: 1px solid #fff; }
-        @media only screen and (max-width: 62em) {
-          #tour-index table thead tr {
-            font-size: 2rem;
-            display: flex;
-            justify-content: space-between; } }
-        @media only screen and (max-width: 62em) {
-          #tour-index table thead tr th:first-child {
-            order: 1; } }
-        @media only screen and (max-width: 62em) {
-          #tour-index table thead tr th:nth-child(2) {
-            order: 3;
-            margin-right: 10rem;
-            margin-left: 3rem; } }
-        #tour-index table thead tr th:nth-child(3) {
-          text-align: right;
-          padding-right: 5rem; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table thead tr th:nth-child(3) {
-              display: none; } }
-        @media only screen and (max-width: 62em) {
-          #tour-index table thead tr th:nth-child(4) {
-            order: 2; } }
-        @media only screen and (max-width: 62em) {
-          #tour-index table thead tr th:last-child {
-            order: 5; } }
-        #tour-index table thead tr th:nth-child(4),
-        #tour-index table thead tr th:last-child {
-          text-align: center; }
-    #tour-index table tbody {
-      font-size: 2rem; }
-      #tour-index table tbody tr {
-        border-bottom: 1px solid #fff; }
-        @media only screen and (max-width: 62em) {
-          #tour-index table tbody tr {
-            display: flex;
-            justify-content: space-between; } }
-        #tour-index table tbody tr td {
-          padding: 3rem 0; }
-        @media only screen and (max-width: 62em) {
-          #tour-index table tbody tr td:first-child {
-            display: block; } }
-        #tour-index table tbody tr td:first-child span img {
-          display: none; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table tbody tr td:first-child span img {
-              display: inline-block;
-              height: 2.5rem;
-              width: 2.5rem;
-              margin-left: 2rem; } }
-        @media only screen and (max-width: 62em) {
-          #tour-index table tbody tr td:nth-child(2) {
-            order: 3;
-            text-align: center; } }
-        #tour-index table tbody tr td:nth-child(2) span {
-          display: none; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table tbody tr td:nth-child(2) span {
-              font-size: 1.6rem;
-              display: block; } }
-        #tour-index table tbody tr td:nth-child(3) {
-          text-align: right;
-          padding-right: 2rem; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table tbody tr td:nth-child(3) {
-              display: none; } }
-        #tour-index table tbody tr td:nth-child(4) {
-          color: #f60438;
-          text-align: center; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table tbody tr td:nth-child(4) {
-              display: none; } }
-          #tour-index table tbody tr td:nth-child(4) img {
-            height: 2.5rem;
-            width: 2.5rem; }
-        #tour-index table tbody tr td:last-child {
-          text-align: center; }
-          @media only screen and (max-width: 62em) {
-            #tour-index table tbody tr td:last-child {
-              order: 5; } }
-          #tour-index table tbody tr td:last-child a {
-            background: #515051;
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            transition: all .3s; }
-          #tour-index table tbody tr td:last-child a:hover {
-            background: #9c9a9c; }
 
 #news {
   padding: 10rem 0;
@@ -1368,10 +1276,10 @@ h5 {
 
 #gallery {
   display: flex;
+  justify-content: space-between;
   position: relative;
   cursor: pointer;
-  background: black;
-  justify-content: space-between; }
+  background: black; }
   @media only screen and (max-width: 48em) {
     #gallery {
       background: url(../assets/images/no-rome-img-2.jpg) no-repeat center;
@@ -1632,23 +1540,13 @@ h5 {
     #signUpForm div #signUp li button:hover a {
       color: #fff; }
 
-#formSection {
-  padding: 30vh 0 40vh 0; }
-  @media only screen and (min-width: 32em) {
-    #formSection {
-      padding: 30vh 0 40vh 0; } }
-  @media only screen and (max-width: 62em) {
-    #formSection {
-      padding: 10vh 0 20vh 0; } }
+@media only screen and (min-width: 62em) {
+  #formSection {
+    padding: 30vh 0 30vh 0; } }
 
-#formSection {
-  padding: 30vh 0 40vh 0; }
-  @media only screen and (min-width: 32em) {
-    #formSection {
-      padding: 30vh 0 40vh 0; } }
-  @media only screen and (max-width: 62em) {
-    #formSection {
-      padding: 10vh 0 20vh 0; } }
+@media only screen and (min-width: 32em) {
+  #formSection {
+    padding: 20vh 0 30vh 0; } }
 
 #signUpForm {
   padding: 5vh 0 5vh 0; }
@@ -1984,107 +1882,154 @@ h5 {
         background: url("../assets/images/header-tour-mobile.jpg") no-repeat center; } }
 
 #tour {
+  opacity: 0;
+  margin-top: -6rem; }
+
+#tour-complete {
+  opacity: 1;
+  margin-top: 0; }
+
+#tour,
+#tour-complete {
+  transition: all 1s;
   padding: 10rem 0;
   background: url("../assets/images/bg-tour.jpg") no-repeat center;
   background-size: cover;
   color: #fff; }
   @media only screen and (max-width: 48em) {
-    #tour {
+    #tour,
+    #tour-complete {
       padding: 5rem 0; } }
-  #tour tbody tr td:nth-child(2) a {
+  #tour tbody tr td:nth-child(2) a,
+  #tour-complete tbody tr td:nth-child(2) a {
     color: #fc2251;
     margin-right: 1rem;
     font-size: 1.6rem; }
-  #tour .tour-header {
+  #tour .tour-header,
+  #tour-complete .tour-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 10rem; }
     @media only screen and (max-width: 32em) {
-      #tour .tour-header {
+      #tour .tour-header,
+      #tour-complete .tour-header {
         padding-bottom: 5rem; } }
-    #tour .tour-header a, #tour .tour-header h2, #tour .tour-header h3 {
+    #tour .tour-header a, #tour .tour-header h2, #tour .tour-header h3,
+    #tour-complete .tour-header a,
+    #tour-complete .tour-header h2,
+    #tour-complete .tour-header h3 {
       color: #fff; }
-    #tour .tour-header h2 {
+    #tour .tour-header h2,
+    #tour-complete .tour-header h2 {
       font-size: 8rem; }
-    #tour .tour-header h3 {
+    #tour .tour-header h3,
+    #tour-complete .tour-header h3 {
       margin-top: -2.8rem;
       font-size: 6rem; }
-    #tour .tour-header a {
+    #tour .tour-header a,
+    #tour-complete .tour-header a {
       font-size: 1.8rem; }
-  #tour table {
+  #tour table,
+  #tour-complete table {
     width: 100%;
     text-align: left;
     padding: 0 0rem; }
-    #tour table thead {
+    #tour table thead,
+    #tour-complete table thead {
       font-size: 2.5rem; }
-      #tour table thead tr {
+      #tour table thead tr,
+      #tour-complete table thead tr {
         border-bottom: 1px solid #fff; }
         @media only screen and (max-width: 48em) {
-          #tour table thead tr th {
+          #tour table thead tr th,
+          #tour-complete table thead tr th {
             display: none; } }
-        #tour table thead tr th:nth-child(3) {
+        #tour table thead tr th:nth-child(3),
+        #tour-complete table thead tr th:nth-child(3) {
           text-align: right;
           padding-right: 2rem; }
         #tour table thead tr th:nth-child(4),
-        #tour table thead tr th:last-child {
+        #tour table thead tr th:last-child,
+        #tour-complete table thead tr th:nth-child(4),
+        #tour-complete table thead tr th:last-child {
           text-align: center; }
-    #tour table tbody {
+    #tour table tbody,
+    #tour-complete table tbody {
       font-size: 2rem; }
-      #tour table tbody tr {
+      #tour table tbody tr,
+      #tour-complete table tbody tr {
         border-bottom: 1px solid #fff; }
         @media only screen and (max-width: 48em) {
-          #tour table tbody tr {
+          #tour table tbody tr,
+          #tour-complete table tbody tr {
             display: flex;
             flex-direction: column;
             text-align: center; } }
         #tour table tbody tr .close-map:hover,
-        #tour table tbody tr .view-map:hover {
+        #tour table tbody tr .view-map:hover,
+        #tour-complete table tbody tr .close-map:hover,
+        #tour-complete table tbody tr .view-map:hover {
           cursor: pointer; }
-        #tour table tbody tr .close-map {
+        #tour table tbody tr .close-map,
+        #tour-complete table tbody tr .close-map {
           display: none; }
         #tour table tbody tr .icon-map,
-        #tour table tbody tr .icon-lcose {
+        #tour table tbody tr .icon-lcose,
+        #tour-complete table tbody tr .icon-map,
+        #tour-complete table tbody tr .icon-lcose {
           height: 2.3rem;
           width: 2rem; }
-        #tour table tbody tr td {
+        #tour table tbody tr td,
+        #tour-complete table tbody tr td {
           padding: 3rem 0; }
           @media only screen and (max-width: 48em) {
-            #tour table tbody tr td {
+            #tour table tbody tr td,
+            #tour-complete table tbody tr td {
               padding: 1.2rem; } }
         @media only screen and (max-width: 48em) {
-          #tour table tbody tr td:first-child {
+          #tour table tbody tr td:first-child,
+          #tour-complete table tbody tr td:first-child {
             order: 1;
             font-size: 3rem;
             text-transform: uppercase; } }
         @media only screen and (max-width: 48em) {
-          #tour table tbody tr td:nth-child(2) {
+          #tour table tbody tr td:nth-child(2),
+          #tour-complete table tbody tr td:nth-child(2) {
             padding-top: 0;
             order: 5;
             font-size: 1.4rem; } }
-        #tour table tbody tr td:nth-child(3) {
+        #tour table tbody tr td:nth-child(3),
+        #tour-complete table tbody tr td:nth-child(3) {
           text-align: right;
           padding-right: 2rem; }
           @media only screen and (max-width: 48em) {
-            #tour table tbody tr td:nth-child(3) {
+            #tour table tbody tr td:nth-child(3),
+            #tour-complete table tbody tr td:nth-child(3) {
               order: 4;
               text-align: center;
               padding: 0; } }
-        #tour table tbody tr td:nth-child(4) {
+        #tour table tbody tr td:nth-child(4),
+        #tour-complete table tbody tr td:nth-child(4) {
           color: #f60438;
           text-align: center; }
           @media only screen and (max-width: 48em) {
-            #tour table tbody tr td:nth-child(4) {
+            #tour table tbody tr td:nth-child(4),
+            #tour-complete table tbody tr td:nth-child(4) {
               order: 3; } }
-        #tour table tbody tr td:nth-child(4) img {
+        #tour table tbody tr td:nth-child(4) img,
+        #tour-complete table tbody tr td:nth-child(4) img {
           height: 2.5rem;
           width: 2.5rem; }
-        #tour table tbody tr td:last-child {
+        #tour table tbody tr td:last-child,
+        #tour-complete table tbody tr td:last-child {
           text-align: center; }
           @media only screen and (max-width: 48em) {
-            #tour table tbody tr td:last-child {
+            #tour table tbody tr td:last-child,
+            #tour-complete table tbody tr td:last-child {
               order: 2; } }
-          #tour table tbody tr td:last-child a {
+          #tour table tbody tr td:last-child a,
+          #tour-complete table tbody tr td:last-child a {
             background: #515051;
             padding: 1rem 1.5rem;
             cursor: pointer;
@@ -2092,24 +2037,31 @@ h5 {
             color: #fff;
             width: 300px; }
             @media only screen and (max-width: 48em) {
-              #tour table tbody tr td:last-child a {
+              #tour table tbody tr td:last-child a,
+              #tour-complete table tbody tr td:last-child a {
                 padding: 1rem 5.5rem; } }
-          #tour table tbody tr td:last-child a:hover {
+          #tour table tbody tr td:last-child a:hover,
+          #tour-complete table tbody tr td:last-child a:hover {
             background: #9c9a9c; }
-      #tour table tbody .map-container {
+      #tour table tbody .map-container,
+      #tour-complete table tbody .map-container {
         border-bottom: none; }
-        #tour table tbody .map-container .map-wrapper {
+        #tour table tbody .map-container .map-wrapper,
+        #tour-complete table tbody .map-container .map-wrapper {
           padding-top: 1px;
           padding-bottom: 0;
           height: 0; }
-          #tour table tbody .map-container .map-wrapper iframe {
+          #tour table tbody .map-container .map-wrapper iframe,
+          #tour-complete table tbody .map-container .map-wrapper iframe {
             width: 90%;
             height: 0rem;
             transition: all .5s ease-in;
             padding: 0;
             margin: 0; }
             @media only screen and (max-width: 48em) {
-              #tour table tbody .map-container .map-wrapper iframe {
+              #tour table tbody .map-container .map-wrapper iframe,
+              #tour-complete table tbody .map-container .map-wrapper iframe {
                 width: 100%; } }
-      #tour table tbody .bottom-white {
+      #tour table tbody .bottom-white,
+      #tour-complete table tbody .bottom-white {
         border-bottom: solid 1px #fff; }
