@@ -55,13 +55,17 @@
 
 
   <!-- Header Section START -->
-  <section id="header" class="container">
-    <ul>
-      <li><img src="../assets/images/header-title2.png" alt="no-rome image"></li>
-      <li><h2>EXPLORE MUSIC</h2></li>
-      <li><button><a href="./music.php">STREAM</a></button></li>
-    </ul>
-    <img src="../assets/images/home-hero5.png" alt="no-rome" image class="hero-no-rome">
+  <section id="header">
+    <div id="particles-js">
+      <ul>
+        <li><img src="../assets/images/header-title2.png" alt="no-rome image"></li>
+        <li><h2>EXPLORE MUSIC</h2></li>
+        <li><button><a href="./music.php">STREAM</a></button></li>
+      </ul>
+    </div>
+    <!-- <div>
+      <img src="../assets/images/home-hero5.png" alt="no-rome" image class="hero-no-rome">
+    </div> -->
   </section>
   <!-- Header Section END -->
 
@@ -155,6 +159,10 @@
   <?php
     include 'footer.php';  
   ?>
+  
+ 
+  <script src="../js/particles.js"></script>
+  <script src="../js/app.js"></script>
 
 </body>
 

@@ -3,6 +3,7 @@
   display: flex;
   height: 100vh;
   position: relative;
+  background: gray;
   
 
   @media only screen and (max-width : $bp-tablet-largest) {
@@ -12,75 +13,87 @@
     margin-top: 3rem;
     width: 100%;
   }
-  
-  & ul {
-    @include flex-column;
-    align-items: center;
+  & #particles-js {
+    width:100%; 
     position: relative;
 
-    @media only screen and (max-width : $bp-tablet-largest) {
-      position: absolute;
-      top: 25%;
-      padding: 2rem;
-    }
-
-    @media only screen and (max-width : $bp-phone-largest) {
-      top: 15%;
-      padding: 1rem;
-    }
-
-    & img {
-      margin-top: 5rem;
-      width: 100%;
-      height: auto;
-      @media only screen and (max-width : $bp-tablet-largest) {
-        // display: none;
-      }
-
-      @media only screen and (max-width : $bp-tablet-largest) {
-        width: 100%;
-        margin-top: 15rem;
-      }
-    }
-   
-    & h2 {
-      justify-items: center;
-      letter-spacing: 10px;
-
-      @media only screen and (max-width : $bp-phone-largest) {
-        font-size: 1.8rem;
-      }
-    }
+    & ul {
+      @include flex-column;
+      align-items: center;
+      position:absolute;
+      left:0;
+      top:0;
   
-    & button {
-      margin-top: 2rem;
-      font-size: 2rem;
-      letter-spacing: .5rem;
-      color: #fff;
-      background: #222;
-      padding: 2rem 6rem;
-      border: none;
-      display: inline-block;
-      vertical-align: middle;
-      transform: perspective(1px) translateZ(0);
-      // box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
-      
-      clip-path: polygon(0 0, 75% 0, 100% 100%, 24% 100%);
-      cursor: pointer;
-
+      @media only screen and (max-width : $bp-tablet-largest) {
+        position: absolute;
+        top: 25%;
+        padding: 2rem;
+      }
+  
       @media only screen and (max-width : $bp-phone-largest) {
-        font-size: 1.3rem;
+        top: 15%;
+        padding: 1rem;
+      }
+  
+      & img {
+        margin-top: 5rem;
+        width: 100%;
+        height: auto;
+        @media only screen and (max-width : $bp-tablet-largest) {
+          // display: none;
+        }
+  
+        @media only screen and (max-width : $bp-tablet-largest) {
+          width: 100%;
+          margin-top: 15rem;
+        }
+      }
+     
+      & h2 {
+        justify-items: center;
+        letter-spacing: 10px;
+  
+        @media only screen and (max-width : $bp-phone-largest) {
+          font-size: 1.8rem;
+        }
+      }
+    
+      & button {
+        margin-top: 2rem;
+        font-size: 2rem;
+        letter-spacing: .5rem;
+        color: #fff;
+        background: #222;
+        padding: 2rem 6rem;
+        border: none;
+        display: inline-block;
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        // box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+        
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 24% 100%);
+        cursor: pointer;
+  
+        @media only screen and (max-width : $bp-phone-largest) {
+          font-size: 1.3rem;
+        }
       }
     }
   }
+  
 
-  & .hero-no-rome {
-    // width: 50%;
-    // height: auto;
-    @media only screen and (max-width : $bp-tablet-largest) {
-      display: none;
-    }
-  }
+  // & div{
+  //   max-width: 50vw;
+  //   height: auto;
+  //   // display:  none;
+  //   & .hero-no-rome {
+  //     height: auto;
+  //     width: 100%;
+  //     @media only screen and (max-width : $bp-tablet-largest) {
+  //       display: none;
+  //     }
+  //   }
+  // }
 
   //CHANGE THIS TO INFINITE HOVER
   & button:hover,
