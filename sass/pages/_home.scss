@@ -2,15 +2,17 @@
   padding-top: 6rem;
   display: flex;
   height: 100vh;
-  position: relative;
-  background: gray;
+  // position: relative;
+  // background: gray;
+  background: url(../assets/images/hero-image-big.jpg) no-repeat;
+  background-size: cover;
   
 
   @media only screen and (max-width : $bp-tablet-largest) {
     flex-direction: column;
     background: url(../assets/images/home-hero-mobile.png) no-repeat;
     background-size: cover;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 100%;
   }
   & #particles-js {
@@ -21,7 +23,7 @@
       @include flex-column;
       align-items: center;
       position:absolute;
-      left:0;
+      left:2%;
       top:0;
   
       @media only screen and (max-width : $bp-tablet-largest) {
@@ -50,6 +52,7 @@
       }
      
       & h2 {
+        margin-top: -2rem;
         justify-items: center;
         letter-spacing: 10px;
   

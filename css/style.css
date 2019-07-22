@@ -1110,14 +1110,14 @@ h5 {
   padding-top: 6rem;
   display: flex;
   height: 100vh;
-  position: relative;
-  background: gray; }
+  background: url(../assets/images/hero-image-big.jpg) no-repeat;
+  background-size: cover; }
   @media only screen and (max-width: 48em) {
     #header {
       flex-direction: column;
       background: url(../assets/images/home-hero-mobile.png) no-repeat;
       background-size: cover;
-      margin-top: 3rem;
+      margin-top: 2rem;
       width: 100%; } }
   #header #particles-js {
     width: 100%;
@@ -1127,7 +1127,7 @@ h5 {
       flex-direction: column;
       align-items: center;
       position: absolute;
-      left: 0;
+      left: 2%;
       top: 0; }
       @media only screen and (max-width: 48em) {
         #header #particles-js ul {
@@ -1147,6 +1147,7 @@ h5 {
             width: 100%;
             margin-top: 15rem; } }
       #header #particles-js ul h2 {
+        margin-top: -2rem;
         justify-items: center;
         letter-spacing: 10px; }
         @media only screen and (max-width: 32em) {
@@ -1885,8 +1886,7 @@ h5 {
         background: url("../assets/images/header-tour-mobile.jpg") no-repeat center; } }
 
 #tour {
-  opacity: 0;
-  margin-top: -6rem; }
+  opacity: 0; }
 
 #tour-complete {
   opacity: 1;
